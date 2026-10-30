@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #eaf0ee;
+  --panel: #f6f9f8;
+  --ink: #10302b;
+  --muted: #4d6661;
+  --line: #c5d3cf;
+  --accent: #2c6e63;
+  --mark: #e0a526;
+}
+.dark {
+  --paper: #0d1b19;
+  --panel: #142624;
+  --ink: #e6efec;
+  --muted: #93aaa5;
+  --line: #27403c;
+  --accent: #6fc2b1;
+  --mark: #e8b53c;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  line-height: 1.65;
+  transition: background-color 0.25s, color 0.25s;
+}
+h1, h2, h3 { font-family: 'Bricolage Grotesque', system-ui, sans-serif; line-height: 1.1; letter-spacing: -0.02em; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+::selection { background: var(--mark); color: #10302b; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--d, 0s); }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
