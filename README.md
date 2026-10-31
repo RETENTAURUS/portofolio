@@ -5,16 +5,7 @@ Aplikasi web portofolio dengan halaman Beranda, Tentang, Proyek, dan Kontak.
 ## Teknologi
 React 18, React Router 6, Vite, Tailwind CSS 3, Vitest + Testing Library.
 
-## Menjalankan
-```bash
-npm install
-npm run dev        # http://localhost:5173
-npm test           # unit + integration test
-npm run build      # hasil di folder dist
-```
 
-## Ganti data pribadi (wajib sebelum deploy)
-Buka `src/data/profile.js`, lalu ubah `email`, `github`, `linkedin`, dan tambahkan `repo` / `demo` pada tiap proyek jika ada.
 
 ## Pemenuhan kriteria
 | Kriteria | Lokasi |
@@ -29,19 +20,3 @@ Buka `src/data/profile.js`, lalu ubah `email`, `github`, `linkedin`, dan tambahk
 | Fitur tambahan | Mode gelap tersimpan di localStorage (`useTheme.js`) |
 | Responsif | Menu hamburger di mobile, grid adaptif |
 
-## Push ke GitHub
-```bash
-git init
-git add . && git commit -m "feat: inisialisasi proyek React + Vite + Tailwind"
-git branch -M main
-git remote add origin https://github.com/USERNAME/portfolio-alfin.git
-git push -u origin main
-```
-Gunakan pesan commit yang jelas, misalnya `feat:`, `fix:`, `style:`, `test:`, `docs:`.
-
-## Deploy
-**Vercel (disarankan):** import repo di vercel.com, framework Vite, build `npm run build`, output `dist`. File `vercel.json` sudah menangani routing SPA.
-
-**Netlify:** build `npm run build`, publish `dist`. File `public/_redirects` sudah disiapkan.
-
-**GitHub Pages:** perlu `base` di `vite.config.js` dan `HashRouter`, karena Pages tidak mendukung rewrite SPA.
